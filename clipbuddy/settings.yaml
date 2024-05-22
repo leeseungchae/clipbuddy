@@ -1,0 +1,15 @@
+sentence_processing:
+  min_length_for_split: 50
+  chunk_size: 30
+  topic_split_threshold: 30
+
+summary:
+  name: gpt-3.5 
+  model: gpt-3.5-turbo-0125
+  prompt_ver: 20231106
+  temperature: 0.0
+  max_tokens: 1000
+  request_timeout: 600
+  response_format: {"type": "json_object"}
+  summary_template: "You are an assistant that summarizes text. Answer in Korean. Use 'json' format for the response."
+  histroy_template : "Please ask questions based on this text content only. Please respond based only on the content in the 'text'. Answer in Korean. Use 'json' format for the response."
