@@ -2197,3 +2197,178 @@ INFO 2024-05-27 09:39:55,901 basehttp - Broken pipe from ('127.0.0.1', 51911)
 INFO 2024-05-27 09:40:05,996 basehttp "POST /upload-video HTTP/1.1" 200 51
 INFO 2024-05-27 09:40:07,848 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
 INFO 2024-05-27 09:40:10,342 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:05:42,476 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:06:04,522 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:06:21,765 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:06:32,721 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:07:02,791 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:07:11,565 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:07:36,532 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:07:52,687 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:08:44,733 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:09:14,520 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:09:36,750 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:14:16,454 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:16:52,862 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-27 10:16:59,130 log Not Found: /
+WARNING 2024-05-27 10:16:59,131 basehttp "GET / HTTP/1.1" 404 2406
+WARNING 2024-05-27 10:16:59,183 log Not Found: /favicon.ico
+WARNING 2024-05-27 10:16:59,183 basehttp "GET /favicon.ico HTTP/1.1" 404 2457
+WARNING 2024-05-27 10:17:00,516 log Not Found: /
+WARNING 2024-05-27 10:17:00,516 basehttp "GET / HTTP/1.1" 404 2406
+WARNING 2024-05-27 10:17:01,001 log Not Found: /
+WARNING 2024-05-27 10:17:01,001 basehttp "GET / HTTP/1.1" 404 2406
+WARNING 2024-05-27 10:17:03,089 log Not Found: /
+WARNING 2024-05-27 10:17:03,089 basehttp "GET / HTTP/1.1" 404 2406
+WARNING 2024-05-27 10:17:03,662 log Not Found: /
+WARNING 2024-05-27 10:17:03,662 basehttp "GET / HTTP/1.1" 404 2406
+INFO 2024-05-27 10:19:24,253 autoreload Watching for file changes with StatReloader
+WARNING 2024-05-27 10:19:43,576 log Not Found: /
+WARNING 2024-05-27 10:19:43,576 basehttp "GET / HTTP/1.1" 404 2412
+WARNING 2024-05-27 10:19:43,613 log Not Found: /favicon.ico
+WARNING 2024-05-27 10:19:43,614 basehttp "GET /favicon.ico HTTP/1.1" 404 2463
+WARNING 2024-05-27 10:19:50,207 log Not Found: /
+WARNING 2024-05-27 10:19:50,207 basehttp "GET / HTTP/1.1" 404 2412
+WARNING 2024-05-27 10:19:50,363 log Not Found: /favicon.ico
+WARNING 2024-05-27 10:19:50,364 basehttp "GET /favicon.ico HTTP/1.1" 404 2463
+WARNING 2024-05-27 10:19:53,631 log Not Found: /
+WARNING 2024-05-27 10:19:53,631 basehttp "GET / HTTP/1.1" 404 2407
+WARNING 2024-05-27 10:19:53,667 log Not Found: /
+WARNING 2024-05-27 10:19:53,667 basehttp "GET / HTTP/1.1" 404 2407
+WARNING 2024-05-27 10:19:56,668 log Not Found: /
+WARNING 2024-05-27 10:19:56,669 basehttp "GET / HTTP/1.1" 404 2412
+WARNING 2024-05-27 10:20:34,928 log Not Found: /
+WARNING 2024-05-27 10:20:34,928 basehttp "GET / HTTP/1.1" 404 2412
+WARNING 2024-05-27 10:20:35,189 log Not Found: /
+WARNING 2024-05-27 10:20:35,190 basehttp "GET / HTTP/1.1" 404 2412
+WARNING 2024-05-27 10:20:35,348 log Not Found: /favicon.ico
+WARNING 2024-05-27 10:20:35,348 basehttp "GET /favicon.ico HTTP/1.1" 404 2463
+INFO 2024-05-27 10:21:30,390 basehttp "OPTIONS / HTTP/1.1" 200 0
+WARNING 2024-05-27 10:21:30,474 log Not Found: /
+WARNING 2024-05-27 10:21:30,474 basehttp "POST / HTTP/1.1" 404 2413
+INFO 2024-05-27 10:21:33,135 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:21:33,208 basehttp "POST /random-answer HTTP/1.1" 200 176
+INFO 2024-05-27 10:21:41,907 basehttp "POST /random-answer HTTP/1.1" 200 176
+INFO 2024-05-27 10:21:45,227 basehttp "POST /random-answer HTTP/1.1" 200 176
+INFO 2024-05-27 10:22:48,757 basehttp "POST /random-answer HTTP/1.1" 200 176
+INFO 2024-05-27 10:23:25,099 basehttp "POST /random-answer HTTP/1.1" 200 176
+INFO 2024-05-27 10:23:37,349 autoreload /home/steve/workspace/clipbuddy/clipbuddy/clipbuddy/settings/base.py changed, reloading.
+INFO 2024-05-27 10:23:37,644 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:25:54,248 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:26:32,813 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:26:38,612 basehttp "POST /random-answer HTTP/1.1" 200 145
+WARNING 2024-05-27 10:26:52,778 log Not Found: /
+WARNING 2024-05-27 10:26:52,778 basehttp "GET / HTTP/1.1" 404 2412
+INFO 2024-05-27 10:27:38,087 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:29:26,037 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:31:35,625 autoreload Watching for file changes with StatReloader
+ERROR 2024-05-27 10:31:48,471 log Internal Server Error: /upload-video
+ERROR 2024-05-27 10:31:48,471 basehttp "POST /upload-video HTTP/1.1" 500 60
+INFO 2024-05-27 10:33:28,934 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:33:45,137 basehttp "POST /upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:33:46,563 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:33:48,512 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:35:04,572 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:35:05,942 basehttp "POST /random-answer HTTP/1.1" 200 250
+INFO 2024-05-27 10:35:12,669 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:35:13,901 basehttp "POST /random-answer HTTP/1.1" 200 180
+INFO 2024-05-27 10:36:14,141 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:36:15,101 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:36:55,963 basehttp "POST /upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:36:57,854 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:36:59,895 basehttp "POST /random-answer HTTP/1.1" 200 491
+INFO 2024-05-27 10:37:05,452 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:37:46,522 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:38:22,138 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:38:22,987 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:38:36,892 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:39:58,687 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:40:27,494 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:40:50,598 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:40:52,973 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:41:08,139 basehttp "POST /upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:41:09,739 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:41:14,306 basehttp "POST /random-answer HTTP/1.1" 200 145
+WARNING 2024-05-27 10:41:40,983 log Bad Request: /random-answer
+WARNING 2024-05-27 10:41:40,983 basehttp "GET /random-answer HTTP/1.1" 400 28
+INFO 2024-05-27 10:42:32,179 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:42:36,371 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:44:49,507 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:44:53,286 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:45:29,248 basehttp "POST /random-answer HTTP/1.1" 200 103
+INFO 2024-05-27 10:45:31,429 basehttp "POST /random-answer HTTP/1.1" 200 116
+INFO 2024-05-27 10:45:56,118 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:45:57,514 basehttp "POST /random-answer HTTP/1.1" 200 337
+INFO 2024-05-27 10:46:15,095 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:46:35,599 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:48:31,608 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:49:32,695 basehttp "POST /random-answer HTTP/1.1" 200 145
+INFO 2024-05-27 10:52:54,971 autoreload /home/steve/workspace/clipbuddy/clipbuddy/core/views.py changed, reloading.
+INFO 2024-05-27 10:52:55,264 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 10:54:35,143 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 10:54:36,954 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:54:38,659 basehttp "POST /random-answer HTTP/1.1" 200 515
+INFO 2024-05-27 10:54:46,209 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:54:47,079 basehttp "POST /random-answer HTTP/1.1" 200 116
+INFO 2024-05-27 10:54:56,593 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:54:57,687 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 10:55:14,083 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:55:15,187 basehttp "POST /random-answer HTTP/1.1" 200 179
+INFO 2024-05-27 10:55:24,987 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:55:26,275 basehttp "POST /random-answer HTTP/1.1" 200 257
+INFO 2024-05-27 10:55:29,475 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:55:30,698 basehttp "POST /random-answer HTTP/1.1" 200 257
+INFO 2024-05-27 10:55:40,912 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 10:55:43,302 basehttp "POST /random-answer HTTP/1.1" 200 623
+INFO 2024-05-27 11:00:26,103 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:00:40,192 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:00:56,785 basehttp "POST /random-answer HTTP/1.1" 200 2504
+INFO 2024-05-27 11:01:02,178 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 11:01:03,401 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:01:15,826 basehttp "POST /random-answer HTTP/1.1" 200 1093
+INFO 2024-05-27 11:01:23,162 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:01:27,860 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:01:37,982 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 11:01:39,483 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:02:05,430 autoreload /home/steve/workspace/clipbuddy/clipbuddy/core/views.py changed, reloading.
+INFO 2024-05-27 11:02:05,728 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 11:02:09,432 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 11:02:11,279 basehttp "POST /random-answer HTTP/1.1" 200 273
+INFO 2024-05-27 11:02:13,284 basehttp "OPTIONS /random-answer HTTP/1.1" 200 0
+INFO 2024-05-27 11:02:15,057 basehttp "POST /random-answer HTTP/1.1" 200 193
+INFO 2024-05-27 11:02:54,927 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:03:00,490 basehttp "POST /random-answer HTTP/1.1" 200 1068
+INFO 2024-05-27 11:03:06,600 basehttp "POST /random-answer HTTP/1.1" 200 241
+INFO 2024-05-27 11:03:09,467 basehttp "POST /random-answer HTTP/1.1" 200 116
+INFO 2024-05-27 11:03:11,908 basehttp "POST /random-answer HTTP/1.1" 200 150
+INFO 2024-05-27 11:05:16,759 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:05:20,729 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:05:55,001 basehttp "POST /random-answer HTTP/1.1" 200 61
+INFO 2024-05-27 11:05:56,693 basehttp "POST /random-answer HTTP/1.1" 200 1483
+INFO 2024-05-27 11:07:19,867 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:07:24,222 basehttp "POST /random-answer HTTP/1.1" 200 61
+INFO 2024-05-27 11:07:32,135 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:07:54,744 autoreload /home/steve/workspace/clipbuddy/clipbuddy/core/views.py changed, reloading.
+INFO 2024-05-27 11:07:55,037 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 11:09:51,098 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:09:57,836 basehttp "POST /random-answer HTTP/1.1" 200 1201
+INFO 2024-05-27 11:23:14,183 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:23:39,341 autoreload /home/steve/workspace/clipbuddy/clipbuddy/core/views.py changed, reloading.
+INFO 2024-05-27 11:23:39,628 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 11:24:13,954 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 11:24:19,921 basehttp "POST /random-answer HTTP/1.1" 200 1105
+INFO 2024-05-27 11:24:30,155 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 11:24:42,549 autoreload /home/steve/workspace/clipbuddy/clipbuddy/core/views.py changed, reloading.
+INFO 2024-05-27 11:24:42,858 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 11:24:48,791 basehttp "POST /random-answer HTTP/1.1" 200 715
+INFO 2024-05-27 11:24:57,072 basehttp "POST /random-answer HTTP/1.1" 200 193
+INFO 2024-05-27 11:25:09,150 basehttp "POST /random-answer HTTP/1.1" 200 344
+INFO 2024-05-27 12:57:53,290 autoreload Watching for file changes with StatReloader
+INFO 2024-05-27 13:06:26,453 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 13:08:53,565 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 13:09:03,135 basehttp "POST /random-answer HTTP/1.1" 200 677
+INFO 2024-05-27 13:10:24,835 basehttp "POST /random-answer HTTP/1.1" 200 575
+INFO 2024-05-27 13:15:06,270 basehttp "POST /random-answer HTTP/1.1" 200 45
+INFO 2024-05-27 13:15:59,711 basehttp "POST //upload-video HTTP/1.1" 200 51
+INFO 2024-05-27 13:16:23,840 basehttp "POST /random-answer HTTP/1.1" 200 982
+INFO 2024-05-27 13:17:07,638 basehttp "POST /random-answer HTTP/1.1" 200 161
