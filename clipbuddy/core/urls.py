@@ -4,5 +4,5 @@ from .views import upload_video,add_conversation
 app_name = "core"
 urlpatterns = [
     path("upload-video", upload_video),
-    path("add_conversation", add_conversation),
+    path("random-answer", add_conversation, name='add_conversation'),
 ]

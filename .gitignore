@@ -3,3 +3,5 @@
 .log
 .env
 db.sqlite3
+data
+.zip

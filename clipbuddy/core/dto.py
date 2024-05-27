@@ -9,4 +9,4 @@ class LlmItem(NamedTuple):
     request_timeout: int
     response_format: dict
     summary_template: str
-    histroy_template: str
+    history_template: str

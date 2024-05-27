@@ -11,5 +11,5 @@ summary:
   max_tokens: 1000
   request_timeout: 600
   response_format: {"type": "json_object"}
-  summary_template: "You are an assistant that summarizes text. Answer in Korean. Use 'json' format for the response."
-  histroy_template : "Please ask questions based on this text content only. Please respond based only on the content in the 'text'. Answer in Korean. Use 'json' format for the response."
+  summary_template: "You are an assistant. Answer in Korean. Use 'json' format for the response."
+  history_template: "Please ask questions based on this text content only. Please respond based only on the content in the 'text'. Answer in Korean. Use 'json' format for the response. However, if the content is related to the text but not directly found within it, please use your own knowledge to answer."

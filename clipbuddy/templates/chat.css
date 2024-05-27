@@ -1,0 +1,305 @@
+body{
+    overflow: hidden;
+}
+
+.main-content {
+    display: flex;
+}
+
+.navigator{
+    width: 13.8%;
+    height: 100vh;
+    background-color: #8CA9D3;
+}
+
+.chatPageContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content-inner{
+    width: 86.2%;
+    height: 100vh;
+}
+
+
+/* 대제목 텍스트 */
+.big-title{
+    font-size: 30px;
+}
+
+.small-title{
+    font-size: 20px;
+}
+
+
+/* 신규 채팅 버튼 쪽 래퍼 */
+.new-chat-wrapper{
+    height: 12.5%;
+    justify-content: center;
+    align-content: center;
+}
+
+/* 기존 채팅 래퍼 */
+.exist-chat-wrapper{
+    height: 87.5%;
+    justify-content: center;
+    align-content: center;
+}
+
+/* 기존 채팅 제목 래퍼 */
+.exist-chat-title-wrapper{
+    height: 12%;
+    justify-content: center;
+    align-content: center;
+}
+
+/* 기존 채팅 대화 텍스트 */
+.exist-chat-title{
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 5%;
+}
+
+/* 기존 채팅 본문 래퍼 */
+.exist-chat-body-wrapper{
+    height: 77%;
+    /* background-color: red; */
+    align-content: center;
+}
+
+/* 기존 채팅 본문 영역 */
+.exist-chat-body{
+    min-height: 95%;
+    margin: 0px 10px;
+    overflow-x: hidden;
+}
+
+/* 신규 채팅 버튼 */
+.new-chat-button{
+    width: 90%;
+    height: 41px;
+    margin: 0 auto;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 2px solid #707070;
+    border-radius: 9px;
+    opacity: 1;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    text-decoration-line: none;
+
+}
+/* 신규 채팅 아이콘 영역 */
+.new-chat-icon-wrapper{
+    width: 15%;
+    justify-content: center;
+    align-content: center;
+    text-align: -webkit-center;
+}
+/* 신규 채팅 아이콘 */
+.new-chat-icon{
+    mask: url(public/images/icon-plus.svg) no-repeat center / contain;
+    -webkit-mask: url(public/images/icon-plus.svg) no-repeat center / contain;
+}
+
+/* 신규 채팅 글자 영역 */
+.new-chat-text-wrapper{
+    width: 70%;
+    justify-content: center;
+    align-content: center;
+}
+/* 신규 채팅 글자 */
+.new-chat-text{
+    /* UI Properties */
+    text-align: center;
+    font: normal normal normal 18px/24px Segoe UI;
+    letter-spacing: 0px;
+    color: #707070;
+    opacity: 1;
+
+}
+
+/* 신규 채팅 버튼 마우스 오버 이벤트 */
+.new-chat-button:hover{
+
+    /* UI Properties */
+    background: #2F365F80 0% 0% no-repeat padding-box;
+    border: 2px solid #7A7A7A;
+    border-radius: 9px;
+    opacity: 1;
+}
+
+.new-chat-button:hover .new-chat-text{
+    color:#FFFFFF
+}
+
+/* 질의 래퍼 */
+.chat-page-wrapper{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* 질의 컨테이너 */
+.chat-page-container{
+    /* min-width: 768px; */
+    width: 100%;
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* 정렬을 위한 질의 텍스트 인풋 창 */
+.question-input-wrapper{
+    min-height: 10vh;
+    width: 90%;
+    border-radius: 9px;
+    border: 4px solid #7A7A7A;
+
+    margin: 10px 0px;
+}
+
+/* input 박스(아이콘, 인풋태그 포함) */
+.question-input-box{
+    display: flex;
+}
+
+/* 질의 텍스트 인풋 창 */
+.question-input{
+    width: 90%;
+    min-height: 10vh;
+    outline: none;
+    border-color: transparent;
+    font-size: 17px;
+    word-wrap:break-word
+}
+
+.question-input:focus {outline: none;} /* outline 테두리 없애기 */
+
+.question-input:focus >.question-input-wrapper{
+    border: 4px solid #FFBEB0;
+} 
+
+
+/* 질의 제출 아이콘을 담은 박스 */
+.question-submit-icon-box{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    margin: 5px auto;
+}
+
+/* 홈버튼 아이콘 */
+.home-icon{
+    mask: url(public/images/logo.svg) no-repeat center / contain;
+    -webkit-mask: url(public/images/logo.svg) no-repeat center / contain;
+}
+
+/* 질의 제출 아이콘 */
+.question-submit-icon{
+    mask: url(public/images/submit-icon.svg) no-repeat center / contain;
+    -webkit-mask: url(public/images/submit-icon.svg) no-repeat center / contain;
+}
+
+/* 질의 예시 컨테이너 */
+.question-example-inner-container{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+
+}
+
+/* 질의 예시 박스 */
+.question-example-box{
+    border: 4px solid #7A7A7A;
+    height: 6vh;
+    width: 30%;
+    border-radius: 20px;
+
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 질의 예시 박스 마우스 오버 */
+.question-example-box:hover{
+    /* border: 4px solid #7A7A7A; */
+    background-color: #7A7A7A;
+    
+    height: 6vh;
+    width: 30%;
+    border-radius: 20px;
+
+    text-align: center;
+
+    align-content: center;
+}
+
+.question-example-box:hover > .example-button-text{
+    color: #FFFFFF;
+}
+
+/* 질의 예시 텍스트 */
+.example-button-text{
+    color: #7A7A7A;
+    font-size: 17px;
+}
+
+/* 질의 추천 텍스트 */
+.question-recommend{
+    font-size: 17px;
+}
+
+
+
+ 
+.chat_wrap .chat { padding-bottom: 12px; }
+.chat_wrap .chat ul { width: 100%; list-style: none; }
+.chat_wrap .chat ul li { width: 100%; }
+.chat_wrap .chat ul li.left { text-align: left; }
+.chat_wrap .chat ul li.right { text-align: right; }
+ 
+.chat_wrap .chat ul li > div { font-size: 13px;  }
+.chat_wrap .chat ul li > div.sender { margin: 10px 20px 0 20px; font-weight: bold; }
+.chat_wrap .chat ul li > div.message { display: inline-block; word-break:break-all; margin: 5px 20px; max-width: 75%; border: 1px solid #888; padding: 10px; border-radius: 5px; background-color: #FCFCFC; color: #555; text-align: left; }
+ 
+.chat_wrap .chat-page-container .input-div {width: 100%; bottom: 0; background-color: #FFF; text-align: center; border-top: 1px solid #FFBEB0; }
+/* .chat_wrap .input-div > textarea { width: 100%; height: 80px; border: none; padding: 10px; } */
+.chat_wrap .chat-page-container .input-div > textarea { width: 100%; height: 80px; border: none; padding: 10px; }
+
+.chat-ul{height: 100%; overflow-y: scroll; display:flex; flex-direction:column-reverse;}
+
+.wrapper-1{ height: 74vh;}
+.wrapper-2{ height: 20vh;}
+
+.format { display: none; }
+
+::-webkit-scrollbar {
+    width: 8px;  /* 스크롤바의 너비 */
+}
+
+::-webkit-scrollbar-thumb {
+    height: 30%; /* 스크롤바의 길이 */
+    background: #FFBEB0; /* 스크롤바의 색상 */
+    
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
+}
+
+.input-text{
+    width: 70%;
+}

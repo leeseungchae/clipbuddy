@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css" >
+    <script src="public/extension/jquery-3.7.1.min.js"></script>
+    <title>ClipBuddy</title>
+</head>
+<body>
+    <div class="loader-container loader-hidden">
+        <div class="loader">
+            <div class="loader-wheel"></div>
+            <div class="loader-text"></div>
+        </div>
+           
+
+    </div>
+
+    
+    <div class="main-container full-height index-page">
+        <header>
+            <div class="sticky-wrapper" style="min-height: 70px;">
+                <a href="index.html">
+                    <img src="public/images/logo.svg" alt="">
+                </a>
+            </div>
+            
+        </header>
+        <div class="main-content">
+            <div class="startPageBox">
+                <div class="container">
+                    <div class="converter-container">
+
+                        <!-- 1. 영상 파일 또는 링크 선택 -->
+                        <div class="file-source-text-container">
+                            <h1 class="file-source-text">1. 영상 파일 또는 링크를 선택해 주세요.</h1>
+                        </div>
+                        
+                        <!-- 영상 파일, 링크 박스 -->
+                        <div class="file-source-button-container flex">
+                            <div class="file-source-button">
+                                <label for="pc-upload-add" class="action-label">
+                                    <span>파일 선택</span>
+                                </label> 
+                                <div class="menu-wrapper">
+                                    <div class="dropdown-menu file-source-nav">
+
+                                        <!-- <label for="pc-upload-add" class="upload-icon-div icon-lightblue pc-upload-icon"></label> -->
+                                        <label for="pc-upload-add" class="upload-icon-div icon-lightblue pc-upload-icon">
+                                        </label>
+
+                                        <input type="file" id="pc-upload-add" name="pc-upload" multiple="multiple" class="pc-upload" style="display: none;"> 
+                                        
+                                        <div class="upload-icon-div icon-lightblue link-upload-icon"></div>
+
+                                        <div class="upload-icon-div icon-lightblue dropbox-upload-icon"></div>
+
+                                        <div class="upload-icon-div icon-lightblue drive-upload-icon"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <!-- 2. 참고 자료 -->
+                        <div class="file-source-text-container">
+                            <h1 class="file-source-text">2. 버디가 함께 참고할 자료가 있나요? </h1>
+                        </div>
+                        
+                        <!-- 참고 자료 박스 -->
+                        <div class="etc-source-button-container">
+                            <!-- 버튼 1. AI -->
+                            <div class="etc-source-button-box">
+                                <div class="upload-icon-div icon-blue reference-ai-icon"></div>
+                                <h3>AI</h3>
+                            </div>
+                            <!-- 공백 - 버튼만큼 -->
+                            <div class="etc-source-button-box-empty"></div>
+                            <!-- 버튼 2. 외부자료 -->
+                            <div class="etc-source-button-box">
+                                <div class="upload-icon-div icon-blue reference-outer-icon"></div>
+                                <h3>외부 자료</h3>
+                            </div>
+                        </div>
+
+                        <div class="file-source-text-container buttonContainer">
+                            <a class="submit-button" onclick="sendVideo()">이렇게 공부할래요!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-6 col-lg-4 text-center ">
+                        <div class="info-box">
+                            <p class="upload-icon-div icon-white bulb-icon"></p>
+                            <h3>어떻게 영상 정보를 이해하나요?</h3>
+                            <p>저희는 WhisperAPI를 통하여 영상의 AUDIO를 TEXT로 변환합니다. </p>    
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4 text-center">
+                        <div class="info-box">
+                            <p class="upload-icon-div icon-white lock-icon"></p>
+                            <h3>개인정보가 염려되시나요?</h3>
+                            <p>이 사이트는 개인정보를 저장하지 않습니다. 질문을 식별할 수 있는 개인 코드는 페이지 로딩에 따라 랜덤으로 부여됩니다.</p>    
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 col-md-6 col-lg-4 text-center">
+                        <div class="info-box">
+                            <p class="upload-icon-div icon-white global-icon"></p>
+                            <h3>모든 시스템에서 이용 가능해요!</h3>
+                            <p>저희는 시스템에 구애받지 않는 기능 구현을 실현하기 위해, 실행파일이 아닌 웹 형태의 프로그램을 제작하였습니다.</p>    
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            
+        </div>
+    </div>
+    
+
+    <script src="index.js"></script>
+    <script src="indexOnly.js"></script>
+</body>
+</html>

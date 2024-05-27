@@ -5,6 +5,7 @@ import uuid
 import openai
 import ffmpeg
 import yaml
+import wave
 from  core.src.customtexttiling import text_tiling
 # from langchain.chains import LLMChain
 from langchain.chains import LLMChain
@@ -18,6 +19,9 @@ from dotenv import load_dotenv
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema import HumanMessage, SystemMessage
 from langchain.chains import LLMChain
+import traceback
+from multiprocessing import Pool, cpu_count
+
 load_dotenv()
 
 def parse_yaml(path) -> dict:
@@ -50,19 +54,37 @@ def extract_audio_from_video(video_path: str):
 
     return audio_path
 
+def write_wave_chunk(data, chunk_index, audio_file):
+    chunk_path = f"temp_chunk_{chunk_index}.wav"
+    with wave.open(chunk_path, "wb") as chunk_file:
+        chunk_file.setnchannels(audio_file.getnchannels())
+        chunk_file.setsampwidth(audio_file.getsampwidth())
+        chunk_file.setframerate(audio_file.getframerate())
+        chunk_file.writeframes(data)
+    return chunk_path
 
-def transcribe_audio(audio_path: str):
-    with open(audio_path, "rb") as audio_file:
-        audio_file= open(audio_path, "rb")
-    try:    
-        transcription = openai.Audio.transcribe(
-        model="whisper-1", 
-        file=audio_file
-        )
-        return transcription.text
-    except Exception as e:
-        print(e)
+def transcribe_chunk(chunk_info):
+    chunk_path, chunk_index = chunk_info
+    with open(chunk_path, "rb") as temp_file:
+        transcription = openai.Audio.transcribe(model="whisper-1", file=temp_file)
+    os.remove(chunk_path)
+    return transcription["text"]
 
+def transcribe_audio_chunked(audio_path: str, chunk_size: int = 20 * 1024 * 1024):
+    audio_file = wave.open(audio_path, "rb")
+    file_size = os.path.getsize(audio_path)
+    num_chunks = (file_size // chunk_size) + 1
+
+    chunk_infos = []
+    for chunk_index in range(num_chunks):
+        data = audio_file.readframes(chunk_size // audio_file.getsampwidth())
+        chunk_path = write_wave_chunk(data, chunk_index, audio_file)
+        chunk_infos.append((chunk_path, chunk_index))
+
+    with Pool(cpu_count()) as pool:
+        transcriptions = pool.map(transcribe_chunk, chunk_infos)
+
+    return " ".join(transcriptions)
 
 def process_sentences(sentence_list,min_length_for_split:int =50 ,chunk_size:int = 30):
     """
@@ -79,7 +101,7 @@ def process_sentences(sentence_list,min_length_for_split:int =50 ,chunk_size:int
             print("Error occurred while text tiling. Splitting sentences by chunk size", str(e))
             return split_sentences(sentence_list=sentence_list, chunk_size=chunk_size)
     else:
-        return [[{i: sent["new_text"]} for i, sent in enumerate(sentence_list)]]
+        return [[{i: sent} for i, sent in enumerate(sentence_list)]]
 
 def split_list(input_list:list, chunk_size:int):
     """리스트를 지정된 크기의 청크로 나눕니다."""
@@ -92,38 +114,43 @@ def split_sentences(sentence_list, chunk_size=100):
     주어진 리스트를 chunk_size 단위로 분할하여 각 청크마다 인덱스와 함께 사전 형태로 반환합니다.
     """
     return [
-            [{i + j * chunk_size: item["new_text"]} for i, item in enumerate(chunk)]
+            [{i + j * chunk_size: item} for i, item in enumerate(chunk)]
             for j, chunk in enumerate(split_list(input_list=sentence_list, chunk_size=chunk_size))
             ]
 
-def text_summary_gpt(text):
+def summarize_chunk(chunk, summary_template, model):
+    combined_text = " ".join([str(item[key]) for item in chunk for key, value in item.items()]).strip()
+    prompt = get_template(str(summary_template), combined_text)
+    chain = LLMChain(llm=model, prompt=prompt)
+    response = chain.run({"text": ''})
+    parsed_data = json.loads(response)
+    return parsed_data['summary']
 
+def text_summary_gpt(text):
     parse = r'[.,!?]'
     sentence_list = re.split(parse, text)
     sentence_list = [token.strip() for token in sentence_list if token.strip()]
+    print(sentence_list)
+    
+    # process_sentences 함수 호출
     splited_dict = process_sentences(sentence_list=sentence_list, min_length_for_split=sentence_settings['min_length_for_split'], chunk_size=sentence_settings['chunk_size'])
+    print(splited_dict)
+    
+    # 모델과 템플릿 가져오기
     model = get_model(config_data=settings['summary'])
     summary_template = settings['summary']['summary_template']
-    summary_results = []
-
-    for i in splited_dict:
-        combined_text = ""
-        for item in i:
-            for key, value in item.items():
-                combined_text += str(value) + " "
-        combined_text = combined_text.strip()
-
-        prompt = get_template(str(summary_template), combined_text)
-        chain = LLMChain(llm=model, prompt=prompt)
-        response = chain.run({"text": ''})
-        parsed_data = json.loads(response)
-        summary_results.append(parsed_data['summary'])
-
+    
+    # 멀티프로세싱 풀 생성
+    with Pool(processes=4) as pool:
+        # 각 청크를 요약하는 작업을 병렬로 실행
+        results = [pool.apply_async(summarize_chunk, args=(chunk, summary_template, model)) for chunk in splited_dict]
+        
+        # 모든 결과를 수집
+        summary_results = [result.get() for result in results]
+    
     single_summary = ''.join(summary_results)
-
+    
     return single_summary
-
-
 
 def get_model(config_data) -> ChatOpenAI:
         """모델 구성에 따라 ChatOpenAI 인스턴스를 생성하고 반환합니다.

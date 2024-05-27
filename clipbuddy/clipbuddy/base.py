@@ -19,8 +19,7 @@ SECRET_KEY = "django-insecure-e87#v_i6nu4o9w1m&o@$1t)7@c3$mv9!l89c+p-fx8xhv)6npz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['*','localhost']
 
 # Application definition
 
@@ -32,6 +31,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core.apps.CoreConfig",
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -42,8 +42,16 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
+
+CORS_ALLOW_CREDENTIALS = True  # 자격 증명 포함 허용
 ROOT_URLCONF = "clipbuddy.urls"
 
 TEMPLATES = [
@@ -61,7 +69,7 @@ TEMPLATES = [
         },
     },
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 WSGI_APPLICATION = "clipbuddy.wsgi.application"
 
 
