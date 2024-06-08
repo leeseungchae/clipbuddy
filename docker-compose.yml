@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: clipbuddy
+      POSTGRES_USER: clipbuddy_user
+      POSTGRES_PASSWORD: clipbuddy_password
+  backend:
+    hostname: backend
+    build:
+      context: ./clipbuddy
+    environment:
+      - DATABASE_NAME=clipbuddy
+      - DATABASE_USER=clipbuddy_user
+      - DATABASE_PASSWORD=clipbuddy_password
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+    command: >
+      bash -c "
+      python manage.py makemigrations && 
+      python manage.py migrate  &&  
+      gunicorn -b 0.0.0.0:8000 clipbuddy.asgi.dev:application
+      "
+    volumes:
+      - ./clipbuddy:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  frontend:
+    build:
+      context: ./ClipBuddy_FRONTEND
+    command: npm start
+    volumes:
+      - ./ClipBuddy_FRONTEND:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

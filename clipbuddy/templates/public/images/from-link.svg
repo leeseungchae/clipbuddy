@@ -1,7 +1,0 @@
-<svg id="구성_요소_6_3" data-name="구성 요소 6 – 3" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
-  <rect id="사각형_37" data-name="사각형 37" width="42" height="42" fill="transparent"/>
-  <g id="링크" transform="translate(2.5 2.5)">
-    <path id="패스_1" data-name="패스 1" d="M20.316,15.684a6.552,6.552,0,0,0-9.264,0L6.418,20.316a6.552,6.552,0,1,0,9.266,9.266L18,27.265" fill="none" stroke="#C5D5EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path id="패스_2" data-name="패스 2" d="M15.684,20.316a6.552,6.552,0,0,0,9.264,0l4.633-4.632a6.552,6.552,0,1,0-9.265-9.266L18,8.734" fill="none" stroke="#C5D5EC" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  </g>
-</svg>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
-  <g id="Icon_akar-globe" data-name="Icon akar-globe" transform="translate(-1.5 -1.5)">
-    <path id="패스_5" data-name="패스 5" d="M33,18A15,15,0,1,1,18,3,15,15,0,0,1,33,18Z" fill="none" stroke="#f7f1ed" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path id="패스_6" data-name="패스 6" d="M18,33c-3.314,0-6-6.716-6-15S14.686,3,18,3s6,6.716,6,15S21.314,33,18,33Z" fill="none" stroke="#f7f1ed" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-    <path id="패스_7" data-name="패스 7" d="M3,18H33" fill="none" stroke="#f7f1ed" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
-  </g>
-</svg>

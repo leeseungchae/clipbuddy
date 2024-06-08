@@ -25,11 +25,7 @@ idna==3.7
 joblib==1.4.2
 jsonpatch==1.33
 jsonpointer==2.4
-# langchain==0.0.292
-# langchain-community==0.2.0
-# langchain-core==0.2.0
-# langchain-openai==0.1.7
-# langchain-text-splitters==0.2.0
+langchain==0.0.292
 langsmith==0.0.92
 marshmallow==3.21.2
 multidict==6.0.5
@@ -60,3 +56,10 @@ typing_extensions==4.11.0
 urllib3==2.2.1
 whisper==1.1.10
 yarl==1.9.4
+gunicorn==22.0.0
+uvicorn==0.15.0
+django-cors-headers==4.3.1
+django-debug-toolbar==4.4.2
+django-environ==0.11.2
+django-extensions==3.2.3
+psycopg2-binary

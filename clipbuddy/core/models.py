@@ -5,7 +5,7 @@ class UploadSession(models.Model):
     user_id = models.CharField(max_length=255, unique=True)  # 사용자 ID를 저장하는 필드
     upload_status = models.CharField(max_length=50, default='incomplete')  # 업로드 상태를 저장하는 필드
     created_at = models.DateTimeField(auto_now_add=True)  # 레코드가 생성된 시간
-
+ 
     def __str__(self):
         return f"UploadSession(user_id={self.user_id}, status={self.upload_status})"
     

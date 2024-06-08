@@ -2,13 +2,19 @@ from django.shortcuts import render
 from django.http import JsonResponse,HttpResponseBadRequest
 from core.utils import save_video,extract_audio_from_video,transcribe_audio_chunked,text_summary_gpt,chat_gpt
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
 from core.models import UploadSession, Conversation
 import uuid
 import json
 import traceback
+import logging
+
+user_logger = logging.getLogger('user_logger')
+
 
 # Create your views here.
 @csrf_exempt
+@require_http_methods(["OPTIONS", "POST"])
 def upload_video(request):
     if request.method == 'POST' and request.FILES.get('file'):
         file = request.FILES['file']
@@ -34,6 +40,7 @@ def upload_video(request):
             response = JsonResponse({'user_id': user_id}, status=200)
             response["Access-Control-Allow-Origin"] = "http://localhost:8000"  
             response["Access-Control-Allow-Credentials"] = "true"
+            
 
             return response
 
@@ -48,9 +55,19 @@ def upload_video(request):
 
 
 @csrf_exempt
+@require_http_methods(["OPTIONS", "POST"])
 def add_conversation(request):
+    if request.method == 'OPTIONS':
+        response = JsonResponse({'detail': 'Preflight response'})
+        response["Access-Control-Allow-Origin"] = "http://localhost:8000"
+        response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+        response["Access-Control-Allow-Headers"] = "Content-Type"
+        response["Access-Control-Allow-Credentials"] = "true"
+        return response
+    
     if request.method == 'POST' and request.body:
         body = json.loads(request.body)
+        user_logger.info(body)
         user_id = body.get('user_id')
         message = body.get('message')
         upload_sessions = UploadSession.objects.filter(user_id=user_id)
@@ -67,7 +84,7 @@ def add_conversation(request):
             data = json.loads(result)
             keys_to_check = ['summary', 'answer', 'message','keywords','response','text']
     
-    # 키가 존재하는지 확인하고 값을 설정
+            # 키가 존재하는지 확인하고 값을 설정
             response_message = None
             for key in keys_to_check:
                 if key in data:
@@ -77,13 +94,20 @@ def add_conversation(request):
             # 키가 없을 경우 기본 메시지 설정
             if response_message is None:
                 response_message = "No relevant information found."
-            
-            # JsonResponse 반환
+
             response = JsonResponse({'message': response_message}, status=200)
+            response["Access-Control-Allow-Origin"] = "http://localhost:8000"
+            response["Access-Control-Allow-Credentials"] = "true"
             return response
+        
         except Exception as e:
             message = "죄송합니다. 다시 한번 입력 부탁드립니다."
             response = JsonResponse({'message': message, 'error': str(e)}, status=200)
+            response["Access-Control-Allow-Origin"] = "http://localhost:8000"
+            response["Access-Control-Allow-Credentials"] = "true"
             return response
-    else:
-        return JsonResponse({'error': 'Invalid request'}, status=400)
+    
+    response = JsonResponse({'error': 'Invalid request'}, status=400)
+    response["Access-Control-Allow-Origin"] = "http://localhost:8000"
+    response["Access-Control-Allow-Credentials"] = "true"
+    return response

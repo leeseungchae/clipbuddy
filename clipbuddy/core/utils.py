@@ -81,7 +81,7 @@ def transcribe_audio_chunked(audio_path: str, chunk_size: int = 20 * 1024 * 1024
         chunk_path = write_wave_chunk(data, chunk_index, audio_file)
         chunk_infos.append((chunk_path, chunk_index))
 
-    with Pool(cpu_count()) as pool:
+    with Pool(1) as pool:
         transcriptions = pool.map(transcribe_chunk, chunk_infos)
 
     return " ".join(transcriptions)
