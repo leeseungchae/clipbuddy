@@ -23,7 +23,7 @@ services:
       bash -c "
       python manage.py makemigrations && 
       python manage.py migrate  &&  
-      gunicorn -b 0.0.0.0:8000 clipbuddy.asgi.dev:application
+      gunicorn -b 0.0.0.0:8000 --timeout 1000 clipbuddy.asgi.dev:application
       "
     volumes:
       - ./clipbuddy:/app
