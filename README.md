@@ -2,6 +2,11 @@
 
 ClipBuddy는 LLM(GPT)을 사용하여 동영상을 이해하고 대화하는 기능을 제공하는 프로젝트입니다. 이 프로젝트는 프론트엔드, 백엔드 및 PostgreSQL 데이터베이스로 구성되어 있습니다.
 
+## 시연영상
+
+[![시연 영상](https://www.youtube.com/watch?v=YAZoyJcZsvQ)
+
+
 ## 설치 및 실행 방법
 
 1. 먼저, 이 저장소를 클론합니다:
